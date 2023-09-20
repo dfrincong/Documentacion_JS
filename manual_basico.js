@@ -47,3 +47,42 @@ switch (k) {
         console.log("El número es " + mivariable);
 };
 
+// datos dinámicos
+console.log(`k es igual a ${k}`);
+
+
+// do while
+let jonas = 1
+do {
+    console.log(`3 ** ${jonas} = `, 3 ** jonas);
+    jonas ++;
+} while (jonas <= 5);
+
+// forEach, .map
+const informacion = ['Zona Franca', 'Campus', 'GBP', 'Bucaramanga'];
+informacion.forEach((element, index) => {
+    console.log(`${index}: ${element}`);
+});
+
+const lenguajes = ['python', 'java', 'php', 'c', 'c++', 'pascal'];
+const nuevoArreglo = lenguajes.map((lenguaje, indice) => {
+    return lenguaje.toUpperCase();
+});
+console.log(nuevoArreglo);
+
+// DOM
+console.log("DOM");
+console.log(document.body);
+
+const elementos = document.getElementsByClassName("titulo");
+console.log("getElementsByClassName,", elementos);
+let elementoModified = elementos[0].textContent.toLocaleUpperCase();
+console.log(elementoModified);
+
+const identi = document.getElementById('uno');
+console.log("getElementById,", identi);
+
+const elementoPorEtiqueta = document.querySelector('p');
+const elementoPorClase = document.querySelector('.titulo');
+console.log("querySelector,", `Por etiqueta: ${elementoPorEtiqueta.textContent}`);
+console.log(`Por clase: ${elementoPorClase.textContent}`);
