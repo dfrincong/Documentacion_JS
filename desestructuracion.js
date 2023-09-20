@@ -26,3 +26,11 @@ let {length} = cadena;
 console.log(length);
 let {l,...resto} = cadena;
 console.log(resto);
+
+// import y export
+export function nombres(apellido) {
+    console.log("Hola", apellido)
+};
+
+const textico = "Arroz con leche";
+export default textico;

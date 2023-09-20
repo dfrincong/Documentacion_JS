@@ -58,7 +58,7 @@ do {
     jonas ++;
 } while (jonas <= 5);
 
-// forEach, .map
+// forEach, .map (para recorrer)
 const informacion = ['Zona Franca', 'Campus', 'GBP', 'Bucaramanga'];
 informacion.forEach((element, index) => {
     console.log(`${index}: ${element}`);
@@ -72,17 +72,66 @@ console.log(nuevoArreglo);
 
 // DOM
 console.log("DOM");
-console.log(document.body);
+console.log(document.body);  // llama al html
 
-const elementos = document.getElementsByClassName("titulo");
+const elementos = document.getElementsByClassName("titulo"); // llama la clase
 console.log("getElementsByClassName,", elementos);
 let elementoModified = elementos[0].textContent.toLocaleUpperCase();
 console.log(elementoModified);
 
-const identi = document.getElementById('uno');
+const identi = document.getElementById('uno'); // lama el id
 console.log("getElementById,", identi);
 
-const elementoPorEtiqueta = document.querySelector('p');
+const elementoPorEtiqueta = document.querySelector('p');  // selecciona elemento, clase o id (solo el primero)
 const elementoPorClase = document.querySelector('.titulo');
 console.log("querySelector,", `Por etiqueta: ${elementoPorEtiqueta.textContent}`);
 console.log(`Por clase: ${elementoPorClase.textContent}`);
+
+const seleccionAll = document.querySelectorAll(".titulo"); // selecciona todos los que encuentre
+seleccionAll.forEach(elemento => console.log("querySelectorAll", elemento));
+
+document.querySelector("h1").style.color = "red"; // style desde js
+
+/*  generar html con javascript:
+    document.createElement("etiqueta")
+    document.insertBefore(elementoInsertar,dondeInsertar) en el DOM
+    document.appendChild(elementoInsertar) en el código */
+
+// localStorage
+
+// Objeto a guardar
+const mascota = {
+    nombre: 'Tony',
+    edad: '2 años',
+    }
+console.log(1, mascota);
+//Guardamos la información y convertimos a string el objeto
+localStorage.setItem('mascota', JSON.stringify(mascota));
+//Obtenemos el objeto del local storage y lo guardamos
+let mascotaGuardada = localStorage.getItem('mascota');
+console.log(2, mascotaGuardada);
+//Convertimos la información a un objeto nuevamente
+mascotaGuardada = JSON.parse(mascotaGuardada);
+console.log(3, mascotaGuardada);
+//Imprimir información
+console.log(4, `Nombre: ${mascotaGuardada.nombre}`);
+console.log(5, `Edad: ${mascotaGuardada.edad}`);
+//Eliminamos la información guardada
+localStorage.removeItem('mascota');
+
+// importar datos
+import { nombres } from "./desestructuracion.js";
+import textico from "./desestructuracion.js";
+
+nombres("Guerrero"); //normal
+console.log(textico);  //por defecto
+
+// objetos literales
+console.log(mascota);
+console.log({
+    mascota  //objeto dentro de otro objeto con el mismo nombre
+});
+
+// spread
+const mascotaNueva = {...mascota}; // clona el objeto
+console.log("nueva", mascotaNueva);
