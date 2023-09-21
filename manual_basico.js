@@ -135,3 +135,27 @@ console.log({
 // spread
 const mascotaNueva = {...mascota}; // clona el objeto
 console.log("nueva", mascotaNueva);
+
+// promesas
+const aprobar = false;
+const promesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (aprobar) {
+            resolve();
+        } else {
+            reject();
+        }
+    }, 1500);
+});
+
+promesa
+    .then(() => console.log("se cumplió"))
+    .catch(() => console.log("no se cumplió"))
+    .finally(() => console.log("se acabó"));
+
+// fetch API
+fetch("./style.css") //Petición a la URL o ruta
+    .then((respuesta) => respuesta.text()) //convertir a texto
+    .then((data) => console.log(data)) //imprimir si todo sale bien
+    .catch(() => console.log("Error al traer la informacíon"))
+    .finally(() => console.log("Petición finalizada"));
