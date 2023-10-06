@@ -74,9 +74,65 @@
 // }
 
 // 6. Construir el algoritmo en Javascript para un programa para cualquier cantidad de estudiantes que lea el nombre, el sexo y la nota definitiva y halle al estudiante con la mayor nota y al estudiante con la menor nota y cuantos eran hombres y cuantos mujeres.
+
+
 // 7. Programa que pida el ingreso del nombre y precio de un artículo y la cantidad que lleva el cliente. Mostrar lo que debe pagar el comprador en su factura.
+
+// console.log("7");
+// const nombreArticulo = prompt("ingrese nombre articulo:");
+// const precio = Number(prompt("ingrese precio:"));
+// const cantidad = Number(prompt("ingrese cantidad:"));
+// let pagoFinal = precio * cantidad;
+// console.log(`el artículo ${nombreArticulo} le cuesta ${pagoFinal}`);
+
 // 8. Programa que Ingrese por teclado:
 // a. el valor del lado de un cuadrado para mostrar por pantalla el perímetro del mismo.
 // b. la base y la altura de un rectángulo para mostrar el área del mismo.
+
+// console.log("8");
+// const lado = Number(prompt("ingrese largo de lado del cuadrado:"));
+// const base = Number(prompt("ingrese base de rectangulo:"));
+// const altura = Number(prompt("ingrese altura del rectangulo:"));
+// console.log(`el perimetro del cuadrado es ${lado*4}`);
+// console.log(`el area del rectángulo es ${base*altura}`);
+
 // 9. N atletas han pasado a finales en salto triple en los juegos olímpicos femenino de 2022. Diseñe un programa que pida por teclado los nombres de cada atleta finalista y a su vez, sus marcas del salto en metros. Informar el nombre de la atleta campeona que se quede con la medalla de oro y si rompió récord, reportar el pago que será de 500 millones. El récord esta en 15,50 metros.
+
+const nAtletas = Number(prompt("ingrese el número de atletas"));
+const record = 15.50;
+const pago = 500000000;
+const nombres = [];
+const saltos = [];
+for (let i = 0; i < nAtletas; i++) {
+    let nombre = prompt("ingrese su nombre: ");
+    let salto = Number(prompt("ingrese su salto: "));
+    nombres.push(nombre);
+    saltos.push(salto);
+}
+
+saltos.forEach(salto => {
+    if (salto == Math.max(...saltos)) {
+        console.log();
+    } else {
+        
+    }
+});
 // 10. Desarrolle un programa cíclico que capture un dato numérico cada vez, y los vaya acumulando. El programa se detiene cuando el usuario digita un cero. El programa debe mostrar: LA SUMATORIA DE LOS VALORES, EL VALOR DEL PROMEDIO, CUÁNTOS VALORES FUERON DIGITADOS, MAYOR VALOR Y MENOR VALOR.
+
+// let numero = Number(prompt("ingrese un número"));
+// const acumulando = [];
+// while (numero !== 0) {
+//     acumulando.push(numero);
+//     numero = Number(prompt("ingrese un número"));
+// }
+
+// let cont = 0;
+// for (const num of acumulando) {
+//     cont = cont + num
+// }
+// console.log("sumatoria de los números", cont);
+// console.log("promedio de los números", cont/acumulando.length);
+// console.log("cantidad de  números", acumulando.length);
+// console.log("valor maximo entre los números", Math.max(...acumulando));
+// console.log("valor minimo entre los números", Math.min(...acumulando));
+// console.log(acumulando);
