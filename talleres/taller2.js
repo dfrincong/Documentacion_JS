@@ -75,6 +75,45 @@
 
 // 6. Construir el algoritmo en Javascript para un programa para cualquier cantidad de estudiantes que lea el nombre, el sexo y la nota definitiva y halle al estudiante con la mayor nota y al estudiante con la menor nota y cuantos eran hombres y cuantos mujeres.
 
+// console.log("6");
+// const cantidad = Number(prompt("ingrese la cantidad de estudiantes: "));
+// const estudiantes = [];
+// let maximo = - Infinity;
+// let minimo = Infinity;
+// let femenino = 0;
+// let masculino = 0;
+// for (let i = 0; i < cantidad; i++) {
+//     let estudiante = new Object();
+//     estudiante.nombre = prompt("ingrese su nombre: ");
+//     estudiante.sexo = prompt("ingrese el sexo: ");
+//     estudiante.nota = Number(prompt("ingrese la nota definitiva: "));
+//     estudiantes.push(estudiante);
+// };
+// console.log(estudiantes);
+// for (const estudiante of estudiantes) {
+//     if (estudiante.nota > maximo) {
+//         maximo = estudiante.nota;
+//     };
+//     if (estudiante.nota < minimo) {
+//         minimo = estudiante.nota;
+//     };
+//     if (estudiante.sexo == "f") {
+//         femenino += 1;
+//     };
+//     if (estudiante.sexo == "m") {
+//         masculino += 1;
+//     };
+// };
+// for (const estudiante of estudiantes) {
+//     if (estudiante.nota == maximo) {
+//         console.log(`${estudiante.nota} es la maxima nota`);
+//     };
+//     if (estudiante.nota == minimo) {
+//         console.log(`${estudiante.nota} es la minima nota`);
+//     };
+// };
+// console.log(`hay ${femenino} mujeres`);
+// console.log(`hay ${masculino} hombres`);
 
 // 7. Programa que pida el ingreso del nombre y precio de un artículo y la cantidad que lleva el cliente. Mostrar lo que debe pagar el comprador en su factura.
 
@@ -98,38 +137,45 @@
 
 // 9. N atletas han pasado a finales en salto triple en los juegos olímpicos femenino de 2022. Diseñe un programa que pida por teclado los nombres de cada atleta finalista y a su vez, sus marcas del salto en metros. Informar el nombre de la atleta campeona que se quede con la medalla de oro y si rompió récord, reportar el pago que será de 500 millones. El récord esta en 15,50 metros.
 
-const nAtletas = Number(prompt("ingrese el número de atletas"));
-const record = 15.50;
-const pago = 500000000;
-const nombres = [];
-const saltos = [];
-for (let i = 0; i < nAtletas; i++) {
-    let nombre = prompt("ingrese su nombre: ");
-    let salto = Number(prompt("ingrese su salto: "));
-    nombres.push(nombre);
-    saltos.push(salto);
-}
+// console.log("9");
+// const nAtletas = Number(prompt("ingrese el número de atletas"));
+// const atletas = {};
+// let maximo = - Infinity;
+// const pago = "500 millones";
+// const record = 15.50;
+// for (let i = 0; i < nAtletas; i++) {
+//     let nombre = prompt("ingrese su nombre: ");
+//     let salto = Number(prompt("ingrese su salto: "));
+//     atletas[nombre] = salto;
+// };
+// console.log(atletas);
+// for (const atleta in atletas) {
+//     if (atletas[atleta] > maximo) {
+//         maximo = atletas[atleta];
+//     };
+// };
+// for (const atleta in atletas) {
+//     if (atletas[atleta] == maximo) {
+//         console.log(`${atleta} ha sido la campeona y recibira ${pago}`);
+//         if (atletas[atleta] > record) {
+//             console.log(`${atleta} ha impuesto un nuevo record`);
+//         };
+//     };
+// };
 
-saltos.forEach(salto => {
-    if (salto == Math.max(...saltos)) {
-        console.log();
-    } else {
-        
-    }
-});
 // 10. Desarrolle un programa cíclico que capture un dato numérico cada vez, y los vaya acumulando. El programa se detiene cuando el usuario digita un cero. El programa debe mostrar: LA SUMATORIA DE LOS VALORES, EL VALOR DEL PROMEDIO, CUÁNTOS VALORES FUERON DIGITADOS, MAYOR VALOR Y MENOR VALOR.
 
+// console.log("10");
 // let numero = Number(prompt("ingrese un número"));
 // const acumulando = [];
+// let cont = 0;
 // while (numero !== 0) {
 //     acumulando.push(numero);
 //     numero = Number(prompt("ingrese un número"));
-// }
-
-// let cont = 0;
+// };
 // for (const num of acumulando) {
-//     cont = cont + num
-// }
+//     cont = cont + num;
+// };
 // console.log("sumatoria de los números", cont);
 // console.log("promedio de los números", cont/acumulando.length);
 // console.log("cantidad de  números", acumulando.length);
